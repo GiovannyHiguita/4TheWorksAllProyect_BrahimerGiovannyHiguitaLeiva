@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+    <div class="conta-botton">
+        <div class="boton-ver">
+            <a class="btn btn-primary" href="/inicio">Ir Inicio</a>
+        </div>   
+        <div class="boton-ver">
+            <a class="btn btn-success" href="/search">Historias</a>
+        </div>
+        <div class="boton-ver">
+            <a class="btn btn-danger" href="/VerHistoria/{{ historia._id }}">Regresar</a>
+        </div> 
+    </div>
+    
+    <div id="historia">
+        <div class="title-leer">
+           <h2>{{ historia.nombre_historia }}</h2> 
+        </div>
+        
+        <div class="LeerImg">
+            <img src="../../{{ historia.imagen }}" alt="{{ historia.nombre_historia }}">  
+        </div>
+        
+        <div class="LeerHistoria">
+            <h5 class="ConLeer">Historia</h5>
+            <p class="ConLeer">{{ historia.historia }}</p>
+        </div>
+    </div>
+</body>
+{% endblock content %}

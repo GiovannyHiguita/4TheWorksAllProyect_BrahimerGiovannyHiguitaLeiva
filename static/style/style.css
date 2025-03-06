@@ -1,0 +1,320 @@
+body {
+    background: black;
+    color: white; 
+}    
+
+.container_base {
+    background: blue;
+    color: white; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1%;
+}
+
+#bienvenido {
+    color: red;
+}
+
+.bien {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    padding: 1%;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    width: 60%;
+}
+
+.opc0 {
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+}
+
+.opc1 {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.container_register {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    padding: 1%;
+    border: thick double white;
+}
+
+.campos {
+    display: flex;
+}
+
+.entrar {
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+}
+
+#historias {
+    display: flex;
+    background: black;
+    color: white;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    margin: 10px;
+    width: calc(33.33% - 20px);
+}
+
+#historias img {
+    width: 100%;
+    height: 80vh;
+}
+
+.info_histo {
+    display: flex;
+    background: black;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info_historias {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1%;
+    padding: 1%;
+}
+
+.card-title {
+    font-size: 6vh;
+}
+
+.card-text {
+    font-size: 3vh;
+}
+
+.title-hist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+.conta-botton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+
+.boton-ver {
+    display: flex;
+    padding: 1%;
+}
+
+#InfoLectura {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+#InfoLectura img {
+    width: 50%;
+    height: 80vh;
+    border: thick double white;
+}
+
+.img-lectura {
+    display: flex;
+    justify-content: center;
+}
+
+.info-lectura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lectura {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    border: thick double white;
+}
+
+.lect {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: thick double white;
+}
+
+.conta-leer {
+    display: flex;
+}
+
+.title-leer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+.LeerImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+}
+
+.LeerImg img {
+    width: 50%;
+    height: 80vh;
+    border: thick double white;
+}
+
+.LeerHistoria {
+    display: flex;
+    padding: 1%;
+    word-break: break-all;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ConLeer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: thick double white;
+}
+
+.container-newh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    margin: 1%;
+    border: thick double white;
+}
+
+.title-newh {
+    display: flex;
+}
+
+.newh {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 2%;
+    border: thick double white;
+}
+
+.newh2 {
+    width: 70%;
+    padding: 1%;
+}
+
+.form-newh {
+    display: flex;
+    padding: 1%;
+    width: 70%;
+}
+
+.form-group {
+    margin: 0;
+}
+
+.form-group {
+    display: flex;
+    width: 100%;
+}
+
+.camp {
+    display: flex;
+    width: 100%;
+    margin: 0px 0 3% 0;
+}
+
+.select2-results__option--selectable {
+    cursor: pointer;
+    color: black;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    cursor: default;
+    padding-left: 2px;
+    padding-right: 5px;
+    color: black;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: black !important; 
+}
+
+.boton-enviar {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1%;
+    justify-items: center;
+}
+
+.categoria-item {
+    border: thick double white;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+
+}
+
+.busqueda-categoria {
+    display: flex;
+    border: thick double white;
+    width: 100%;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+}
+
+#cate-historias {
+    display: flex;
+}

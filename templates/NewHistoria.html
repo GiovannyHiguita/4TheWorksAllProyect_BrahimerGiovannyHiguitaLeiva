@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<body>
+    <div class="container-newh">
+        <div class="title-newh">
+            <h1>Nueva Historia</h1>
+        </div>
+    
+    
+        <div class="form-newh">
+            <div class="newh">
+                <form action="/NewHistoria" method="post" enctype="multipart/form-data" style="width: 100%;">
+                    <div class="form-group">
+                        <label class="labelclas" for="nombre_historia">Nombre de la historia</label>    
+                    </div>
+                    <div class="form-group">
+                        <input class="camp" type="text" id="nombre_historia" name="nombre_historia" required>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label class="labelclas" for="fecha_de_la_leyenda">Fecha de la leyenda</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="camp" type="number" id="fecha_de_la_leyenda" name="fecha_de_la_leyenda" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="labelclas" for="descripcion_de_historia">Descripción de la historia</label>
+                    </div> 
+                    <div class="form-group">
+                        <textarea class="camp" id="descripcion_de_historia" name="descripcion_de_historia" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="labelclas" for="categoria">Categoría</label>
+                    </div>
+                    <div class="form-group">
+                        <select class="camp" id="categoria" name="categoria" multiple required>
+                            <option value="Accion">Accion</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Asesinatos">Asesinatos</option>
+                            <option value="Peleas">Peleas</option>
+                            <option value="Tristeza">Tristeza</option>
+                            <option value="Venganza">Venganza</option>
+                            <option value="Ciencia Fision">Ciencia Fision</option>
+                            <option value="Documental">Documental</option>
+                            <option value="Comedia">Comedia</option>
+                            <option value="Liberacion">Liberacion</option>
+                            <option value="Entendimiendo">Entendimiendo</option>
+                            <option value="Reflexion">Reflexion</option>
+                            <option value="Arte Casero">Arte Casero</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Medieval">Medieval</option>
+                            <option value="Fantasmal">Fantasmal</option>
+                            <option value="Psicologica">Psicologica</option>
+                            <option value="Aprendizaje">Aprendizaje</option>
+                            <option value="Violento">Violento</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="labelclas" for="distrito">Distrito</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="camp" type="text" id="distrito" name="distrito" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="labelclas" for="historia">Historia</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="camp" id="historia" name="historia" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="labelclas" for="imagen">Imagen</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="camp" type="file" id="imagen" name="imagen" required>
+                    </div>
+
+                    <div class="boton-enviar">
+                        <input class="btn btn-primary" type="submit" value="Crear historia">  
+                    </div>
+                    
+                </form> 
+            </div>   
+        </div>
+    </div> 
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('#categoria').select2({
+            placeholder: 'Seleccione una categoría',
+            multiple: true
+        });
+    });
+</script>
+{% endblock content %}

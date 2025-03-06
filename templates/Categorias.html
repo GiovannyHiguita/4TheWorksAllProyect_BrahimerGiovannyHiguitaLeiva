@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+    <div class="conta-botton">
+        <div class="boton-ver">
+            <a class="btn btn-primary" href="/inicio">Ir Inicio</a>
+        </div>
+        <div class="title-hist">
+            <h1>Categorías</h1>
+        </div> 
+        <div id="boton-ver">
+            <a href="/inicio" class="btn btn-danger">Regresar</a>
+        </div>
+    </div>
+
+    <div class="categorias">
+        {% for categoria in ["Accion","Drama","Romance","Asesinatos","Peleas","Tristeza","Venganza","Ciencia Fision","Documental","Comedia","Liberacion","Entendimiendo","Reflexion","Arte Casero","Aventura","Medieval","Fantasmal","Psicologica","Aprendizaje","Violento"] %}
+            <div class="categoria-item">
+                <a href="/Categorias/{{ categoria }}">{{ categoria }}</a>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if historias %}
+        <div class="busqueda-categoria">
+            <h1>Historias de {{ categoria }}</h1>
+        </div>
+
+        <div id="historias">
+            {% for historia in historias %}
+                <div class="card">
+                    <img id="historias" src="../../{{ historia.imagen }}" alt="Imagen de la historia">
+                    <div class="info_histo">
+                        <h2>{{ historia.nombre_historia }}</h2>
+                        <p>Categorías: {{ historia.categoria | join(", ") }}</p>
+                        <p>Año de subida: {{ historia.fecha_subida }}</p>   
+                    </div>
+                </div>
+            {% endfor %}
+        </div>    
+    {% endif %}
+</body>
+
+{% endblock content %}

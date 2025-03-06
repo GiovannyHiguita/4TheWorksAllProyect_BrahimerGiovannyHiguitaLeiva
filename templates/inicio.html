@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <div class="info">
+        <div class="bien">
+            <h2 id="bienvenido">Bienvenido</h2>
+            <p>Proyecto de Leyendas de costa rica</p> 
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="opciones">
+            <div class="opc0">
+                <h4>Que Deseas Hacer Lector?</h4>
+            </div>
+            
+            <div class="opc1">
+                <a href="/Categorias" class="btn btn-warning">Buscar Categorias</a>
+            </div>
+
+            <div class="opc1">
+                <a href="/search" class="btn btn-primary">Leer Historias</a>
+            </div>
+
+            <div class="opc1">
+                <a href="/NewHistoria" class="btn btn-secondary">Agregar Historias</a>
+            </div>
+
+            <div class="opc1">
+                <a href="/ListHistorias" class="btn btn-danger">Editar Historias</a>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<script>
+    const nombre_usuario = localStorage.getItem('nombre_usuario');
+    document.getElementById('bienvenido').innerHTML = `Bienvenido [${nombre_usuario}]`;
+</script>
+
+{% endblock content %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate, max-age=0">
+<link rel="stylesheet" href="../static/style/style.css">
+
+<body>
+    <div class="conta-botton">
+        <div class="boton-ver">
+            <a class="btn btn-primary" href="/inicio">Ir Inicio</a>
+        </div>  
+        <div id="boton-ver">
+            <a class="btn btn-success" href="{{ url_for('leer_historia', id=historia._id) }}">Leer Historia</a>
+        </div>
+        <div id="boton-ver">
+            <a class="btn btn-danger" href="/search">Regresar</a>
+        </div>
+    </div>
+    
+    <div class="title-hist">
+       <h1>Datos De La Historia</h1> 
+    </div>
+
+    <div id="InfoLectura">
+        <div class="img-lectura">
+            <img src="../../{{ historia.imagen }}" alt=""> 
+        </div>
+        <br>
+        <div class="info-lectura">
+            <div class="lectura">
+                <div class="lect">
+                    <h2>{{ historia.nombre_historia }}</h2>
+                </div>
+                <div class="lect">
+                    <p>Fecha de la leyenda: {{ historia.fecha_de_la_leyenda }}</p>
+                </div>
+                <div class="lect">
+                    <p>Fecha de subida: {{ historia.fecha_de_subida }}</p>   
+                </div>
+                <div class="lect">
+                    <p>Descripción de la historia: {{ historia.descripcion_de_historia }}</p>
+                </div>
+                
+                <div class="lect">
+                    <p>Categoría: {{ historia.categoria | join(", ") }}</p>
+                </div>
+                <div class="lect">
+                    <p>Distrito: {{ historia.distrito }}</p>  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content %}

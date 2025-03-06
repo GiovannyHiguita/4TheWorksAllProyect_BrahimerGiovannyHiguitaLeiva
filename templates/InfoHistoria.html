@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+
+    <div class="conta-botton">
+        <div id="boton-ver">
+            <a class="btn btn-success" href="/EditarHistoria/{{ historia._id }}">Editar</a>
+        </div>
+        <div class="boton-ver">
+            <a class="btn btn-primary" href="/inicio">Ir Inicio</a>
+        </div>  
+        <div id="boton-ver">
+            <button class="btn btn-danger" id="EliminarHistoria" data-id="{{ historia._id }}">Eliminar</button>
+        </div>
+    </div>
+
+    <div class="title-hist">
+        <h1>Informacion De La Historia</h1> 
+    </div>
+
+   
+    <div id="InfoLectura">
+        <div class="img-lectura">
+            <img src="../../{{ historia.imagen }}" alt=""> 
+        </div>
+        <br>
+        <div class="info-lectura">
+            <div class="lectura">
+                <div class="lect">
+                    <h2>{{ historia.nombre_historia }}</h2>
+                </div>
+                <div class="lect">
+                    <p>Fecha de la leyenda: {{ historia.fecha_de_la_leyenda }}</p>
+                </div>
+                <div class="lect">
+                    <p>Fecha de subida: {{ historia.fecha_subida }}</p> 
+                </div>
+                <div class="lect">
+                    <p>Descripción de la historia: {{ historia.descripcion_de_historia }}</p>
+                </div>
+                
+                <div class="lect">
+                    <p>Categoría: {{ historia.categoria | join(", ") }}</p>
+                </div>
+                <div class="lect">
+                    <p>Distrito: {{ historia.distrito }}</p>  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../static/scripts/EliminarHistoria.js"></script>
+
+{% endblock content %}
